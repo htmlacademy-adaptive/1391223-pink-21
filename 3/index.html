@@ -19,7 +19,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link" html="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
@@ -61,18 +61,15 @@
         </a>
         <ul class="intro-download__list">
           <li class="intro-download__item">
-            <a class="intro-download__logo-apple" href="">
-              <img src="" class="intro-download__image" alt="Логотип ios" width="47" height="56">
+            <a class="intro-download__logo intro-download__logo--apple" href="">
             </a>
           </li>
           <li class="intro-download__item">
-            <a class="intro-download__logo-android" href="">
-              <img src="" class="intro-download__image" alt="Логотип Android" width="43" height="47">
+            <a class="intro-download__logo intro-download__logo--android" href="">
             </a>
           </li>
           <li class="intro-download__item">
-            <a class="intro-download__logo-microsoft" href="">
-              <img src="" class="intro-download__image" alt="Логотип Microsoft" width="44" height="41">
+            <a class="intro-download__logo intro-download__logo--microsoft" href="">
             </a>
           </li>
         </ul>
@@ -136,26 +133,27 @@
       </div>
     </section>
     <section class="page-main__ reviews reviews">
-      <div class="review__wrapper">
-        <h4 class="reviews__title">
+      <h2 class="visually-hidden">Отзывы</h2>
+      <div class="reviews__wrapper">
+        <span class="reviews__title">
           Николай Петров
-        </h4>
-        <p>
+        </span>
+        <p class="reviews-text">
           25 лет, водитель трамвая
         </p>
-        <p>
+        <p class="reviews-text">
           «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
         </p>
-        <div class="advantages__toggles slider__toggles">
-          <input class="slider__toggle" type="radio" name="review" id="review-radio" checked>
-          </input>
-          <input class="slider__toggle" type="radio" name="review" id="review-radio">
-          </input>
-          <input class="slider__toggle" type="radio" name="review" id="review-radio">
-          </input>
-          <label class="slider__toggle-btn" for="review-radio"></label>
-          <label class="slider__toggle-btn" for="review-radio"></label>
-          <label class="slider__toggle-btn" for="review-radio"></label>
+        <div class="reviews__slider slider">
+          <button type="button" class="slider__toggles slider__toggles--activ">
+            <span class="visually-hidden">1</span>
+          </button>
+          <button type="button" class="slider__toggles">
+            <span class="visually-hidden">2</span>
+          </button>
+          <button type="button" class="slider__toggles">
+            <span class="visually-hidden">3</span>
+          </button>
         </div>
       </div>
     </section>
@@ -163,55 +161,51 @@
       <h2 class="visually-hidden">Прайс лист</h2>
       <div class="price__wrapper">
         <table class="price__table">
-          <thead class="price__table-header">
-            <tr>
-              <th></th>
-              <th class="price__header">
-                <p class="price__title">База</p>
-                <p class="price__cost">1.99 USD</p>
-              </th>
-              <th class="price__header price__header--hit">
-                <p class="price__title">Стандарт</p>
-                <p class="price__cost">3.99 USD</p>
-              </th>
-              <th class="price__header">
-                <p class="price__title">Анлим</p>
-                <p class="price__cost">9.99 USD</p>
-              </th>
-            </tr>
-          <tbody class="price__table-body">
-            <tr>
-              <td class="price__name">Розовый фильтр</td>
-              <td class="visually-hidden price_enter">входит в тариф</td>
-              <td class="visually-hidden price_enter">входит в тариф</td>
-              <td class="visually-hidden price_enter">входит в тариф</td>
-            </tr>
-            <tr>
-              <td class="price__name">Смайлики</td>
-              <td class="visually-hidden price__not-enter">не входит в тариф</td>
-              <td class="visually-hidden price_enter">входит в тариф</td>
-              <td class="visually-hidden price_enter">входит в тариф</td>
-            </tr>
-            <tr>
-              <td class="price__name">Комментарии</td>
-              <td class="visually-hidden price__not-enter">не входит в тариф</td>
-              <td class="visually-hidden price__not-enter">не входит в тариф</td>
-              <td class="visually-hidden price_enter">входит в тариф</td>
-            </tr>
-          </tbody>
-          </thead>
+          <tr>
+            <th class="visually-hidden price__title">Тариф</th>
+            <th class="price__title">База</th>
+            <th class="price__title">Стандарт</th>
+            <th class="price__title">Анлим</th>
+          </tr>
+          <tr>
+            <th class="visually-hidden price__cost">Цены</th>
+            <th class="price__cost">1.99 USD</th>
+            <th class="price__cost">3.99 USD</th>
+            <th class="price__cost">9.99 USD</th>
+          </tr>
+          <tr>
+            <th class="price__name">Розовый фильтр</th>
+            <td class="visually-hidden price_enter">входит в тариф</td>
+            <td class="visually-hidden price_enter">входит в тариф</td>
+            <td class="visually-hidden price_enter">входит в тариф</td>
+          </tr>
+          <tr>
+            <th class="price__name">Смайлики</th>
+            <td class="visually-hidden price__not-enter">не входит в тариф</td>
+            <td class="visually-hidden price_enter">входит в тариф</td>
+            <td class="visually-hidden price_enter">входит в тариф</td>
+          </tr>
+          <tr>
+            <th class="price__name">Комментарии</th>
+            <td class="visually-hidden price__not-enter">не входит в тариф</td>
+            <td class="visually-hidden price__not-enter">не входит в тариф</td>
+            <td class="visually-hidden price_enter">входит в тариф</td>
+          </tr>
         </table>
       </div>
-      <div class="price__items">
-        <input class="slider__item" type="radio" name="price" id="price-radio"></input>
-        <input class="slider__item" type="radio" name="price" id="price-radio" checked></input>
-        <input class="slider__item" type="radio" name="price" id="price-radio"></input>
-        <label class="slider__item-btn" for="price-radio"></label>
-        <label class="slider__item-btn" for="price-radio"></label>
-        <label class="slider__item-btn" for="price-radio"></label>
+      <div class="price__slider slider">
+        <button type="button" class="slider__toggles">
+          <span class="visually-hidden">1</span>
+        </button>
+        <button type="button" class="slider__toggles slider__toggles--activ">
+          <span class="visually-hidden">2</span>
+        </button>
+        <button type="button" class="slider__toggles">
+          <span class="visually-hidden">3</span>
+        </button>
       </div>
     </section>
-    <section class="main__page-contacts contacts">
+    <section class="page-main__contacts contacts">
       <div class="contacts__wrapper">
         <h3 class="visually-hidden">
           Контакты
@@ -221,28 +215,32 @@
         </p>
         <ul class="contacts-list">
           <li class="contacts__item">
-            <h3 class="contacts__name">
+            <span class="contacts__name">
               Звоните:
-            </h3>
-            <a class="contacts__telephone" href="tel:+78125556666">
+            </span>
+            <address class="contacts__telephone">
+              <a class="contacts__telephone-item" href="tel:+78125556666">
               тел. +7 (812) 555-66-66
             </a>
+            </address>
           </li>
           <li class="contacts__item">
-            <h3 class="contacts__name">
+            <span class="contacts__name">
               Пpиезжайте в гости:
-            </h3>
+            </span>
             <address class="contacts__address">
               ул. Большая Конюшенная, 19/8
             </address>
           </li>
           <li class="contacts__item">
-            <h3 class="contacts__name">
+            <span class="contacts__name">
               Пишите:
-            </h3>
-            <a class="contacts__email" href="#">
+            </span>
+            <address class="contacts__email">
+              <a class="contacts__email-item" href="mailto:mail@htmlacademy.ru">
               mail@htmlacademy.ru
             </a>
+            </address>
           </li>
         </ul>
         <iframe class="map" title="Карта с адресом компании Pink" src="">
@@ -272,7 +270,7 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright">
+      <div class="page-footer__copyright copyright">
         <b class="copyright__text">
           Разработано:
         </b>
